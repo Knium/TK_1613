@@ -1,0 +1,1 @@
+docker run -it -p 8000:8000 -v ~/Documents/hobby/Hackerson/jphacks2016/move_time:/tests khozzy/selenium-python-chrome xvfb-daemon-run bash

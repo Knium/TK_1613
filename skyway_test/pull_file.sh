@@ -1,0 +1,1 @@
+scp discord@discord.mydns.jp:~/skyway_test/* ./
