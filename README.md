@@ -15,7 +15,7 @@ IT化が進もうと、人と人との直接的な会合は失われることは
 
 **「「「そうだ、PINEを使おう。」」」**
 
-![logo](./image/logo.png =400x)
+![logo](./image/logo.png)
 
 ### 製品説明（具体的な製品の説明）
 
@@ -31,18 +31,18 @@ PINEはWEBブラウザ上で動く待ち合わせ情報共有アプリケーシ�
 #### 1. 特長1
 * LINE Botを友達に追加することによって、Webページにアクセスすることなく集合場所と集合時間に基づいたURLを発行。
 
-![bot](./image/bot.jpg =400x)
+![bot](./image/bot.jpg)
 
 #### 2. 特長2
 * 共有URLには、集合前と集合後のページが別々に用意され、必要な情報とインタラクションのみを提示。
 
 * 集合前
 
-![ongoing](./image/going.png =400x)
+![ongoing](./image/going.png)
 
 * 集合後
 
-![wating](./image/wating.png =400x)
+![wating](./image/wating.png)
 
 #### 3. 特長3
 
