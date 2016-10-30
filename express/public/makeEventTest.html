@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta charset="utf-8">
+<script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+<script src="javascripts/connectFirebase.js"></script>
+<script>
+  connectFB.initAuth(function(uid){
+    console.log("My ID is ",uid);
+  
+    connectFB.writeNewPost({lat:35.655663,lng:139.5414368},"JPHACK打ち上げ会",1477407418010,function(postId){
+      console.log(postId);
+      alert("I made new Event!!  at "+postId);
+    });
+  });
+
+  //35.6556498,139.5420291
+
+  /*******************DataPostSamples*******************/
+  /*
+  writeNewPost(35.655663,139.5414368,"JPHACK打ち上げ会",1477407418010,function(key){
+    console.log(key);
+  });
+
+  updateTarget(query, 43.0639597,141.3432912, function(){
+    console.log("edited!!");
+  });
+  */
+  
+  //目的地が更新されたら発火
+  //var tergetRef = firebase.database().ref('posts/'+query+'geolocation/');
+  //tergetRef.on('child_changed', function(data) {
+  //  console.log(data.val().tergetX);
+  //  console.log(data.val().tergetY);
+  //});
+</script>
+</head>
+<body>
+
+</body>
+</html>

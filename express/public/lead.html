@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/flexboxgrid.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="icon" type="image/x-icon" href="image/ninja.ico">
+        <!--<link rel="manifest" href="stylesheet/manifest.json">-->
+        <link rel="manifest" href="./manifest.json">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQoaAWcy6Y_uf614BZ4f4pIfCX-5EU4JM"></script>
+        <script type="text/javascript" src="javascripts/jquery-2.1.3.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+        <script src="javascripts/connectFirebase.js"></script>
+        <script src="javascripts/geolocate.js"></script>
+        <script src="javascripts/compass.js"></script>
+        <script type="text/javascript" src="javascripts/web.js"></script>
+        <script type="text/javascript" src="javascripts/velocity.min.js"></script>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+        <title>lead page - PINE</title>
+    </head>
+
+    <body>
+        <div class="main">
+
+            <div class="container">
+                <div class="headline">
+                    <div class="block sblock">
+                        <p id="time" class="moji">
+                            到着まで<br>50分
+                        </p>
+                    </div>
+                    <div class="block bblock">
+                        <img class="conpass conpasss" src="svg/arrowshadow.svg" style="top:20px;" alt=""/>
+                        <img class="conpass" src="svg/arrow.svg" alt=""/>
+                    </div>
+                    <div class="block sblock">
+                        <p id="distance" class="moji">
+                            距離<br>
+                            100m
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mapdiv">
+                    <div id="map"></div>
+                </div>
+                <a href="./result.html">目的地に到着！！</a>
+                <a href="" id="inform">すみません遅刻します！！</a>
+            </div>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+    "name": "PINE - 新感覚待ち合わせツール",
+    "short_name": "PINE",
+    "icons": [
+        {
+            "src": "null",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#e91e63",
+    "gcm_sender_id": "1079802744867",
+    "gcm_user_visible_only": true
+}

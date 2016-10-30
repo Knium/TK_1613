@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/flexboxgrid.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/result.css"/>
+        <link rel="icon" type="image/x-icon" href="image/ninja.ico">
+        <!--<link rel="manifest" href="stylesheet/manifest.json">-->
+        <link rel="manifest" href="./manifest.json">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQoaAWcy6Y_uf614BZ4f4pIfCX-5EU4JM"></script>
+        <script type="text/javascript" src="javascripts/jquery-2.1.3.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+        <script src="javascripts/connectFirebase.js"></script>
+        <script src="javascripts/geolocate.js"></script>
+        <script src="javascripts/compass.js"></script>
+        <script type="text/javascript" src="javascripts/result.js"></script>
+        <script type="text/javascript" src="javascripts/velocity.min.js"></script>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+        <title>arrived page - PINE</title>
+    </head>
+
+    <body>
+        <div class="main">
+
+            <div class="container">
+                <div class="headline">
+                    <a class="button" id="updateTarget">目的地を自動更新化（/分）</a>
+                </div>
+
+                <div class=""></div>
+                <table id="memberTable">
+                　<tr>
+                    <th>到着予定時間</th>
+                    <th>現在地との距離</th>
+                  </tr>
+                  <!--
+                  <tr>
+                    <td>りんご</td>
+                    <td>甘酸っぱい</td>
+                  </tr>
+                  -->
+                </table>
+            </div>
+        </div>
+
+    </body>
+
+</html>

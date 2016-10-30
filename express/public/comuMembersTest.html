@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta charset="utf-8">
+<link rel="manifest" href="./manifest.json">
+<script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+<script src="javascripts/connectFirebase.js"></script>
+<script src="javascripts/serviceWorker.js"></script>
+<script>
+  function getUrlQuery(){
+    var vars = [], max = 0, hash = "", array = "";
+    var url = window.location.search;
+
+    hash  = url.slice(1).split('&');    
+    max = hash.length;
+    for (var i = 0; i < max; i++) {
+        array = hash[i].split('=');
+        vars.push(array[0]);
+        vars[array[0]] = array[1];
+    }
+    return vars
+  }
+
+  var eventId = getUrlQuery["id"] || "-KVApDZ8di97wDiOM2-Z";　//テスト用
+  
+  connectFB.initAuth(function(uid){
+    console.log("My ID is ",uid);
+    
+    connectFB.getEvent(eventId,function(eventData){
+      console.log(eventData);
+    });
+
+    //connectFB.updateTarget(eventId, {lat:0.6556498,lng:0.5420291});
+
+    //connectFB.updateMyStatus({lat:35.6556498,lng:139.5420291},120000000,eventId,uid);
+  
+    connectFB.onTarget(eventId, function(geo){
+      alart("targetLocation changed !!");
+    });
+
+    connectFB.getMembers(eventId, function(members){
+      console.log(members);
+    });
+
+    /************* Push Nortification **************/
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('javascripts/serviceWorker.js')
+      .then(function(registration) {
+        return registration.pushManager.getSubscription().then(function(subscription) {
+          if (subscription) {
+            return subscription
+          }
+          return registration.pushManager.subscribe({
+            userVisibleOnly: true
+          })
+        })
+      }).then(function(subscription) {
+        var endpoint = subscription.endpoint;
+        var sliceUrlIndex = endpoint.lastIndexOf("/");
+        var url = endpoint.slice(0,sliceUrlIndex);
+        var nortificationId = endpoint.slice(sliceUrlIndex + 1);
+        console.log(url,nortificationId);
+        connectFB.setNortification(uid,eventId,subscription.endpoint);
+        console.log("pushManager endpoint:", endpoint) // https://android.googleapis.com/gcm/send/******:******......
+      }).catch(function(error) {
+        console.warn("serviceWorker error:", error)
+      });
+    }
+  });
+
+  window.addEventListener('load', function() {
+  })
+  //35.6556498,139.5420291
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

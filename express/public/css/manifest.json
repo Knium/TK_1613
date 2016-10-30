@@ -1,0 +1,21 @@
+{
+  "name": "P.I.N.E",
+  "short_name": "PINE",
+  "start_url": ".",
+  "display": "standalone",
+  "icons": [{
+    "src": "img/icons/48.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "img/icons/72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }],
+  "related_applications": [{
+    "platform": "web"
+  }, {
+    "platform": "play",
+    "url": "http://localhost/"
+  }]
+}
